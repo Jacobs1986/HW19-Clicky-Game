@@ -28,11 +28,16 @@ class App extends React.Component {
     }
 
     imageClick = (index) => {
-        console.log(characters[index])
+        if (!characters[index].clicked) {
+            characters[index].clicked = true
+            this.setState({ characters: this.shuffle(characters) });
+        } else {
+            console.log("GAME OVER");
+        }
     }
 
     componentDidMount() {
-        this.setState({ characters: this.shuffle(characters)});
+        this.setState({ characters: this.shuffle(characters) });
     }
 
     render() {
@@ -42,7 +47,7 @@ class App extends React.Component {
                 {this.state.characters.map((characters, index) =>
                     <CharacterCard
                         imageClick={this.imageClick}
-                        index = {index}
+                        index={index}
                         key={characters.id}
                         id={characters.id}
                         name={characters.name}
