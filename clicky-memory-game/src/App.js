@@ -8,6 +8,10 @@ class App extends React.Component {
         characters: characters
     }
 
+    imageClick = () => {
+        console.log("You clicked the picture");
+    }
+
     
     componentDidMount() {
         console.log(characters);
@@ -19,7 +23,8 @@ class App extends React.Component {
             <>
             <Nav />
             {this.state.characters.map(characters =>
-            <CharacterCard 
+            <CharacterCard
+                imageClick = {this.imageClick}
                 key = {characters.id}
                 name = {characters.name}
                 image = {characters.image}
