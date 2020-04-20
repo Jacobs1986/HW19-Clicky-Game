@@ -2,21 +2,25 @@
     {
         "id": 1,
         "name": "Storm",
-        "image": "https://cdn.vox-cdn.com/thumbor/tsaIdT2qu5CszwTVQy8yt7BYJzk=/0x0:1440x1920/1200x800/filters:focal(566x384:796x614)/cdn.vox-cdn.com/uploads/chorus_image/image/60323251/xmenstorm2.0.jpg"
+        "image": "https://cdn.vox-cdn.com/thumbor/tsaIdT2qu5CszwTVQy8yt7BYJzk=/0x0:1440x1920/1200x800/filters:focal(566x384:796x614)/cdn.vox-cdn.com/uploads/chorus_image/image/60323251/xmenstorm2.0.jpg",
+        "clicked": false
     },
     {
         "id": 2,
         "name": "Jean Grey",
-        "image": "https://www.sideshow.com/wp/wp-content/uploads/2014/04/300173-3C116p6w2.jpg"
+        "image": "https://www.sideshow.com/wp/wp-content/uploads/2014/04/300173-3C116p6w2.jpg",
+        "clicked": false
     },
     {
         "id": 3,
         "name": "Wolverine",
-        "image": "https://static1.srcdn.com/wordpress/wp-content/uploads/2018/12/Wolverine-Classic-Costume.jpg"
+        "image": "https://static1.srcdn.com/wordpress/wp-content/uploads/2018/12/Wolverine-Classic-Costume.jpg",
+        "clicked": false
     },
     {
         "id": 4,
         "name": "Cyclops",
-        "image": "https://static2.srcdn.com/wordpress/wp-content/uploads/2019/06/Xmen-New-Cyclops-Blue-Costume.jpg"
+        "image": "https://static2.srcdn.com/wordpress/wp-content/uploads/2019/06/Xmen-New-Cyclops-Blue-Costume.jpg",
+        "clicked": false
     }
 ]
