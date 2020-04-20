@@ -3,5 +3,10 @@
         "id": 1,
         "name": "Storm",
         "image": "https://cdn.vox-cdn.com/thumbor/tsaIdT2qu5CszwTVQy8yt7BYJzk=/0x0:1440x1920/1200x800/filters:focal(566x384:796x614)/cdn.vox-cdn.com/uploads/chorus_image/image/60323251/xmenstorm2.0.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Jean Grey",
+        "image": "https://www.sideshow.com/wp/wp-content/uploads/2014/04/300173-3C116p6w2.jpg"
     }
 ]
