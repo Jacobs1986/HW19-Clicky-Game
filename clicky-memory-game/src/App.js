@@ -9,7 +9,13 @@ class App extends React.Component {
     }
 
     imageClick = (id) => {
-        console.log(id)
+        let characterIndex = id - 1;
+        if (!characters[characterIndex].clicked) {
+            characters[characterIndex].clicked = true;
+            this.setState({characters: characters})
+        } else {
+            console.log("GAME OVER")
+        }
     }
 
     render() {
