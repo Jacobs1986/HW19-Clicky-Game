@@ -8,15 +8,9 @@ class App extends React.Component {
         characters: characters
     }
 
-    imageClick = () => {
-        console.log("You clicked the picture");
+    imageClick = (id) => {
+        console.log(id)
     }
-
-    
-    componentDidMount() {
-        console.log(characters);
-    }
-
 
     render() {
         return (
@@ -26,8 +20,10 @@ class App extends React.Component {
             <CharacterCard
                 imageClick = {this.imageClick}
                 key = {characters.id}
+                id = {characters.id}
                 name = {characters.name}
                 image = {characters.image}
+                clicked = {characters.clicked}
             />)}
             </>
         )
