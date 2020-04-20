@@ -8,6 +8,12 @@ class App extends React.Component {
         characters: characters
     }
 
+    
+    componentDidMount() {
+        console.log(characters);
+    }
+
+
     render() {
         return (
             <>
