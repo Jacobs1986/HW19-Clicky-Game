@@ -8,29 +8,47 @@ class App extends React.Component {
         characters: characters
     }
 
-    imageClick = (id) => {
-        let characterIndex = id - 1;
-        if (!characters[characterIndex].clicked) {
-            characters[characterIndex].clicked = true;
-            this.setState({characters: characters})
-        } else {
-            console.log("GAME OVER")
+    shuffle = array => {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // And swap it with the current element.
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
         }
+
+        return array;
+    }
+
+    imageClick = (index) => {
+        console.log(characters[index])
+    }
+
+    componentDidMount() {
+        this.setState({ characters: this.shuffle(characters)});
     }
 
     render() {
         return (
             <>
-            <Nav />
-            {this.state.characters.map(characters =>
-            <CharacterCard
-                imageClick = {this.imageClick}
-                key = {characters.id}
-                id = {characters.id}
-                name = {characters.name}
-                image = {characters.image}
-                clicked = {characters.clicked}
-            />)}
+                <Nav />
+                {this.state.characters.map((characters, index) =>
+                    <CharacterCard
+                        imageClick={this.imageClick}
+                        index = {index}
+                        key={characters.id}
+                        id={characters.id}
+                        name={characters.name}
+                        image={characters.image}
+                        clicked={characters.clicked}
+                    />)}
             </>
         )
     }
