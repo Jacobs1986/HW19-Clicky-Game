@@ -7,7 +7,7 @@ function Navigation(props) {
                 <ul>
                     <li className="brand">Memory Game!</li>
                     <li>Click on an image to start the game!</li>
-                    <li>Score: {props.score}</li>
+                    <li>Score: {props.score} | High Score: {props.highscore}</li>
                 </ul>
             </nav>
         </div>
