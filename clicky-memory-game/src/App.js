@@ -32,10 +32,14 @@ class App extends React.Component {
     imageClick = (index) => {
         if (!characters[index].clicked) {
             characters[index].clicked = true
-            this.setState({ score: this.state.score + 1});
+            this.setState({ score: this.state.score + 1 });
             this.setState({ characters: this.shuffle(characters) });
         } else {
             console.log("GAME OVER");
+            if (this.state.score > this.state.highscore) {
+                this.setState({ highscore: this.state.score })
+            }
+            this.setState({ score: 0 });
             characters.forEach(reset => {
                 reset.clicked = false
             })
@@ -50,9 +54,9 @@ class App extends React.Component {
     render() {
         return (
             <>
-                <Nav 
-                    score = {this.state.score}
-                    highscore = {this.state.highscore}
+                <Nav
+                    score={this.state.score}
+                    highscore={this.state.highscore}
                 />
                 {this.state.characters.map((characters, index) =>
                     <CharacterCard
