@@ -6,8 +6,7 @@ import characters from "./characters.json";
 class App extends React.Component {
     state = {
         characters: characters,
-        score: 0,
-        highscore: 0
+        score: 0
     }
 
     shuffle = array => {
@@ -52,7 +51,6 @@ class App extends React.Component {
             <>
                 <Nav 
                     score = {this.state.score}
-                    highscore = {this.state.highscore}
                 />
                 {this.state.characters.map((characters, index) =>
                     <CharacterCard
