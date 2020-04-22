@@ -5,8 +5,7 @@ import characters from "./characters.json";
 
 class App extends React.Component {
     state = {
-        characters: characters,
-        score: 0
+        characters: characters
     }
 
     shuffle = array => {
@@ -25,20 +24,15 @@ class App extends React.Component {
             array[randomIndex] = temporaryValue;
         }
 
-        return array
+        return array;
     }
 
     imageClick = (index) => {
         if (!characters[index].clicked) {
             characters[index].clicked = true
-            this.setState({ score: this.state.score + 1});
             this.setState({ characters: this.shuffle(characters) });
         } else {
             console.log("GAME OVER");
-            characters.forEach(reset => {
-                reset.clicked = false
-            })
-            this.setState({ characters: this.shuffle(characters) });
         }
     }
 
@@ -49,9 +43,7 @@ class App extends React.Component {
     render() {
         return (
             <>
-                <Nav 
-                    score = {this.state.score}
-                />
+                <Nav />
                 {this.state.characters.map((characters, index) =>
                     <CharacterCard
                         imageClick={this.imageClick}
